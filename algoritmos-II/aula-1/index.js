@@ -6,6 +6,8 @@ function juntaListas (lista1, lista2) {
     let posicaoAtualLista2 = 0
     let atual = 0
 
+    // O loop abaixo termina quando pelo menos uma das listas acabar.
+
     while (posicaoAtualLista1 < lista1.length && posicaoAtualLista2 < lista2.length) {
         let produtoAtualLista1 = lista1[posicaoAtualLista1]
         let produtoAtualLista2 = lista2[posicaoAtualLista2]
@@ -21,17 +23,23 @@ function juntaListas (lista1, lista2) {
         atual++
     }
 
+    // Caso a lista 1 ainda não tenha terminado, adiocione seus elementos na lista final.
+
     while (posicaoAtualLista1 < lista1.length) {
         listaFinal[atual] = lista1[posicaoAtualLista1]
         posicaoAtualLista1++
         atual++
     }
 
+    // Caso a lista 2 ainda não tenha terminado, adiocione seus elementos na lista final.
+
     while (posicaoAtualLista2 < lista2.length) {
         listaFinal[atual] = lista1[posicaoAtualLista2]
         posicaoAtualLista2++
         atual++
     }
+
+    // Retorna a lista final
 
     return listaFinal
 }
